@@ -2,7 +2,8 @@
   box-sizing: border-box;
 }
 
-a {
+.linkAll {
+  color: #ffd801;
   text-decoration: none;
 }
 
@@ -24,7 +25,7 @@ header {
   box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
 }
 
-.conteiner-header {
+.conteinerHeader {
   display: flex;
   height: 100px;
   align-items: center;
@@ -55,19 +56,17 @@ header {
 
 
 
-.conteinerMain {
-  display: flex;
-  justify-content: space-between;
-}
-
-.conteiner-footer {
+.conteinerFooter {
   height: 50px;
+  background-color: #ffd801;
 }
 
 .footerList {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  height: 100%;
+
 }
 
 .footerItem {
