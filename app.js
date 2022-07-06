@@ -7,6 +7,7 @@ const session = require('express-session');
 const FileStore = require('session-file-store')(session);
 
 const reactSsrMiddleware = require('./middlewares/reactSsr');
+const router = require('./routes/views/index.router');
 
 const authRouts = require('./routes/views/auth.routs'); // роутер регистрации
 
@@ -34,6 +35,4 @@ app.use(express.json());
 
 app.use(reactSsrMiddleware); // аналог res.renderComponent(jsx компонент, {props})
 app.use('/auth', authRouts); // отправляет на authRouts
-
-
 app.listen(PORT, async () => console.log('Веб-сервер слушает порт', PORT));
