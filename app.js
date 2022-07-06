@@ -32,8 +32,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use('/', authRouts); // отправляет на authRouts
-
 app.use(reactSsrMiddleware); // аналог res.renderComponent(jsx компонент, {props})
+app.use('/auth', authRouts); // отправляет на authRouts
+
 
 app.listen(PORT, async () => console.log('Веб-сервер слушает порт', PORT));
