@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.conteiner  {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+header {
+  width: 100%;
+  margin: auto auto;
+  box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
+}
+
+.conteiner-header {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: space-between;
+}
+.headerNavMenu {
+  width: 50%;
+
+}
+
+.headerNavList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerNavItem {
+  margin-left: 3%;
+}
+
+/* .backetImg {
+  background-image: url('/img/корзина.png');
+  background-repeat: no-repeat;
+  background-position-x: center;
+  width: 100%;
+  height: 100%;
+} */
+
+
+
+.conteinerMain {
+  display: flex;
+  justify-content: space-between;
+}
+
+.conteiner-footer {
+  height: 50px;
+}
+
+.footerList {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.footerItem {
+  display: flex;
+}
