@@ -9,6 +9,7 @@ router.get('/', async (req, res) => {
     raw: true,
     where: {
       id: '1',
+      // req.session.userId
     },
     include: [User.Picture],
   });
@@ -20,10 +21,10 @@ router.get('/', async (req, res) => {
     },
     include: [Favourite.Picture],
   });
-  console.log(joinFavUser);
+  // console.log(joinFavUser);
 });
 
-router.get('/constructor', async (req, res) => {
+router.get('/cabinet', async (req, res) => {
   res.renderComponent(Constructor);
 });
 

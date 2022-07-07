@@ -6,7 +6,7 @@ module.exports = function Constructor() {
     <Layout>
       <div className="conteiner conteinerConstructor">
         <div className="blockImg">
-          <img width="300px" src="/img/носки/гарфилд/Frame 1.png" alt="" />
+          <img width="300px" src="/img/носки/цвета/черный.png" alt="" />
         </div>
         <div className="blockBtn">
           <h5>Выбери цвет:</h5>

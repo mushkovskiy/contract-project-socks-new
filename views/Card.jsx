@@ -5,12 +5,12 @@ module.exports = function Card({ el }) {
   return (
 
     <div className="item">
-      <div className="buttons">
-        <span className="deleteBtn" />
-        <span className="likeBtn" />
+      <div className="buttons" key={el['Pictures.id']}>
+        <a deletid={el['Pictures.id']} className="deleteBtn deleteLink" href={`/render/basket/${el['Pictures.id']}`}>
+        </a>
       </div>
       <div className="image">
-        <img width="70px" src={el} alt="" />
+        <img width="70px" src={el['Pictures.sock_url']} alt="" />
       </div>
       <div className="description">
         <span>White</span>
