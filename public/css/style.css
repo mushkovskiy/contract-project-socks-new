@@ -116,6 +116,7 @@ footer {
   padding: 20px 30px;
   height: 120px;
   display: flex;
+  align-items: center
 }
 
 .item:nth-child(3) {
@@ -125,7 +126,6 @@ footer {
 
 .buttons {
   position: relative;
-  padding-top: 30px;
   margin-right: 60px;
 }
 
@@ -172,7 +172,6 @@ footer {
 }
 
 .quantity {
-  padding-top: 20px;
   margin-right: 60px;
 }
 .quantity input {
@@ -185,7 +184,15 @@ footer {
   font-weight: 300;
 }
 
-button[class*=btn] {
+.minusBtn {
+  width: 30px;
+  height: 30px;
+  background-color: #E1E8EE;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.plusBtn {
   width: 30px;
   height: 30px;
   background-color: #E1E8EE;
@@ -207,7 +214,6 @@ input:focus {
 
 .totalPrice {
   width: 83px;
-  padding-top: 27px;
   text-align: center;
   font-size: 16px;
   color: #43484D;
