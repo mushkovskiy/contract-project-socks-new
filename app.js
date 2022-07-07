@@ -35,4 +35,5 @@ app.use(express.json());
 
 app.use(reactSsrMiddleware); // аналог res.renderComponent(jsx компонент, {props})
 app.use('/auth', authRouts); // отправляет на authRouts
+
 app.listen(PORT, async () => console.log('Веб-сервер слушает порт', PORT));
