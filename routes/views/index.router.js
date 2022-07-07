@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const Main = require('../../views/Main');
 const { User, Favourite } = require('../../db/models');
+const Constructor = require('../../views/Constructor');
 
 router.get('/', async (req, res) => {
   res.renderComponent(Main);
@@ -20,6 +21,10 @@ router.get('/', async (req, res) => {
     include: [Favourite.Picture],
   });
   console.log(joinFavUser);
+});
+
+router.get('/constructor', async (req, res) => {
+  res.renderComponent(Constructor);
 });
 
 module.exports = router;
