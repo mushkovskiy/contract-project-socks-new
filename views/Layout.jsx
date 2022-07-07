@@ -40,13 +40,15 @@ module.exports = function Layout({ children }) {
             </nav>
           </div>
         </header>
-        {children}
+        <main>
+          {children}
+        </main>
         <footer>
           <div className="conteiner conteinerFooter">
-              <ul className="footerList">
-                <li className="footerItem">г. Санкт-Петербург, ул. Кирочная, д.19</li>
-                <li className="footerItem">storesocks@help.ru</li>
-              </ul>
+            <ul className="footerList">
+              <li className="footerItem">г. Санкт-Петербург, ул. Кирочная, д.19</li>
+              <li className="footerItem">storesocks@help.ru</li>
+            </ul>
           </div>
         </footer>
       </body>
