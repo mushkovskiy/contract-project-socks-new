@@ -8,6 +8,7 @@ const FileStore = require('session-file-store')(session);
 
 const reactSsrMiddleware = require('./middlewares/reactSsr');
 const router = require('./routes/views/index.router');
+const renderBasketRouter = require('./routes/views/renderBasket.routs');
 
 const sessionConfig = {
   store: new FileStore(),
@@ -32,6 +33,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(reactSsrMiddleware);
-app.use('/', router)
+app.use('/', router);
+app.use('/render', renderBasketRouter);
 
 app.listen(PORT, async () => console.log('Веб-сервер слушает порт', PORT));
