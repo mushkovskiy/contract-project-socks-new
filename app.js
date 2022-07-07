@@ -9,6 +9,8 @@ const FileStore = require('session-file-store')(session);
 const reactSsrMiddleware = require('./middlewares/reactSsr');
 const router = require('./routes/views/index.router');
 
+const authRouts = require('./routes/views/auth.routs'); // роутер регистрации
+
 const sessionConfig = {
   store: new FileStore(),
   name: 'user_sid',
@@ -31,7 +33,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(reactSsrMiddleware);
-app.use('/', router)
+app.use(reactSsrMiddleware); // аналог res.renderComponent(jsx компонент, {props})
+app.use('/auth', authRouts); // отправляет на authRouts
 
 app.listen(PORT, async () => console.log('Веб-сервер слушает порт', PORT));
