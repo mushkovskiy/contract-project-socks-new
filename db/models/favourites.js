@@ -3,42 +3,41 @@ const {
 } = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
-  class User extends Model {
+  class Favourite extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate({ Picture, Favourite }) {
-      User.Picture = User.belongsToMany(Picture, {
+    static associate({ User, Picture }) {
+      Favourite.User = Favourite.belongsTo(User, {
         foreignKey: 'user_id',
-        otherKey: 'picture_id',
-        through: 'UserPicture',
       });
-      User.Favourite = User.hasMany(Favourite, {
-        foreignKey: 'user_id',
+      Favourite.Picture = Favourite.belongsTo(Picture, {
+        foreignKey: 'picture_id',
       });
     }
   }
-  User.init({
+  Favourite.init({
     id: {
       allowNull: false,
       autoIncrement: true,
       primaryKey: true,
       type: DataTypes.INTEGER,
     },
-    name: {
-      allowNull: false,
-      type: DataTypes.TEXT,
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Users',
+        key: 'id',
+      },
     },
-    email: {
-      allowNull: false,
-      unique: true,
-      type: DataTypes.TEXT,
-    },
-    password: {
-      allowNull: false,
-      type: DataTypes.TEXT,
+    picture_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Pictures',
+        key: 'id',
+      },
     },
     createdAt: {
       allowNull: false,
@@ -50,8 +49,8 @@ module.exports = (sequelize, DataTypes) => {
     },
   }, {
     sequelize,
-    modelName: 'User',
-    tableName: 'Users',
+    modelName: 'Favourite',
+    tableName: 'Favourites',
   });
-  return User;
+  return Favourite;
 };
