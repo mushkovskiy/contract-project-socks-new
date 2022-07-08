@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 main{
   background: linear-gradient(#ffffff, #ffd801);
   background-repeat: no-repeat;
@@ -307,7 +308,7 @@ h5{
   width: 30%;
   display: flex;
   flex-direction: column;
-
+}
 .linkAll:hover {
   color: #5E6977;
 }
@@ -315,4 +316,24 @@ h5{
 .title:hover {
   color: #5E6977;
 
+}
+.btnDiv {
+  display: flex;
+  justify-content: space-around;
+}
+.btnBasket {
+  display: flex;
+  border-radius: 10px;
+  border: 1px solid #000000;
+  background: #7a8694;
+  color: #ffd801;
+  padding: 2% 7%;
+}
+.btnFavorites {
+  display: flex;
+  border-radius: 10px;
+  border: 1px solid #000000;
+  background: #7a8694;
+  color: #ffd801;
+  padding: 2% 5%;
 }

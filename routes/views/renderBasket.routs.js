@@ -1,21 +1,25 @@
 const renderBasketRouter = require('express').Router();
-const { User, UserPicture } = require('../../db/models');
+const { User, UserPicture, Favourite } = require('../../db/models');
 
 const Basket = require('../../views/Basket');
-
-// const array = ['/img/носки/гарфилд/Mask group (5).png', '/img/носки/картинки/пончик.png', '/img/носки/патрик/Group 3.png', '/img/носки/картинки/патрик.png'];
+const Favourites = require('../../views/Favourites');
 
 renderBasketRouter.get('/basket', async (req, res) => {
   const socks = await User.findAll({
     raw: true,
     where: {
-      id: '1',
-      // req.session.userId
+      id: req.session.userId.id,
     },
     include: [User.Picture],
   });
+  const user = await User.findOne({
+    raw: true,
+    where: {
+      id: req.session.userId.id,
+    },
+  });
   // console.log(socks);
-  res.renderComponent(Basket, { socks });
+  res.renderComponent(Basket, { socks, user });
 });
 
 renderBasketRouter.delete('/basket/:id', async (req, res) => {
@@ -23,10 +27,28 @@ renderBasketRouter.delete('/basket/:id', async (req, res) => {
   // console.log(id);
   await UserPicture.destroy({
     where: {
-      user_id: id,
+      picture_id: id,
     },
   });
   res.redirect('/');
+});
+
+renderBasketRouter.get('/like', async (req, res) => {
+  const socksLike = await Favourite.findOne({
+    raw: true,
+    where: {
+      id: req.session.userId.id,
+    },
+    include: [Favourite.Picture],
+  });
+  console.log(socksLike);
+  const userLike = await User.findOne({
+    raw: true,
+    where: {
+      id: req.session.userId.id,
+    },
+  });
+  res.renderComponent(Favourites, { socksLike, userLike });
 });
 
 module.exports = renderBasketRouter;

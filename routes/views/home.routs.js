@@ -1,9 +1,10 @@
 const homeRouts = require('express').Router();
 const React = require('react');
 const { Op } = require('sequelize');
-const { Color, Picture, User } = require('../../db/models');
+const { Color, Picture, User, UserPicture, Favourite } = require('../../db/models');
 
 const Constructor = require('../../views/Constructor');
+const Favourites = require('../../views/Favourites');
 
 homeRouts.get('/', async (req, res) => {
   const user = await User.findOne({
@@ -63,6 +64,23 @@ homeRouts.post('/picture', async (req, res) => {
       ],
     },
   });
-  res.json({ url: picture.sock_url });
+  res.json({ url: picture.sock_url, id: picture.id });
+});
+
+homeRouts.post('/picture/:id', async (req, res) => {
+  const { id } = req.params;
+  await UserPicture.create({
+    user_id: req.session.userId.id,
+    picture_id: id,
+  });
+});
+
+homeRouts.post('/picture/:id', async (req, res) => {
+  const { id } = req.params;
+  const resBD = await Favourite.create({
+    user_id: req.session.userId.id,
+    picture_id: id,
+  });
+  console.log(resBD);
 });
 module.exports = homeRouts;
