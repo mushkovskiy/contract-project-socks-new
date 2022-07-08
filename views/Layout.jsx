@@ -45,6 +45,20 @@ module.exports = function Layout({ children, user }) {
                   <li className="headerNavItem"><a className="linkAll" href="/auth/registration">Зарегистрироваться</a></li>
                   <li className="headerNavItem"><a className="linkAll" href="/auth/login">Войти</a></li>
                   <li className="headerNavItem"><a className="linkAll" href="/auth/logout">Выйти</a></li>
+
+                  {/* <li className="headerNavItem">
+                    <a href="">
+                      <img className="imgBascket" width="30px" src="/img/like.png" alt="" />
+                    </a>
+
+                  </li>
+                  <li className="headerNavItem">
+                    <a href="">
+                      <img className="imgBascket" width="30px" src="/img/корзина.png" alt="" />
+                    </a>
+
+                  </li> */}
+
                 </ul>
               )}
 
