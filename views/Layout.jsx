@@ -21,7 +21,7 @@ module.exports = function Layout({ children }) {
             </a>
             <nav className="headerNavMenu">
               <ul className="headerNavList">
-                <li className="headerNavItem"><a className="linkAll" href="/auth">Зарегистрироваться</a></li>
+                <li className="headerNavItem"><a className="linkAll" href="/auth/registration">Зарегистрироваться</a></li>
                 <li className="headerNavItem"><a className="linkAll" href="/login">Войти</a></li>
                 <li className="headerNavItem"><a className="linkAll" href="/logout">Выйти</a></li>
                 <li className="headerNavItem">

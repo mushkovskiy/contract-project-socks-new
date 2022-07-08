@@ -23,8 +23,8 @@ router.get('/', async (req, res) => {
   console.log(joinFavUser);
 });
 
-router.get('/constructor', async (req, res) => {
-  res.renderComponent(Constructor);
-});
+// router.get('/constructor', async (req, res) => {
+//   res.renderComponent(Constructor);
+// });
 
 module.exports = router;
