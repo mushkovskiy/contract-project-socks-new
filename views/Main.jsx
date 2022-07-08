@@ -6,9 +6,18 @@ module.exports = function Main() {
     <Layout>
       <div className="conteiner conteinerMain">
         <div className="mainItem">
-          <p>
-            Привет, мой друг!
-          </p>
+          <div>
+            <h2>
+              Здравствуй, друг!
+            </h2><br />
+            <p>
+              С помощью нашего редактора вы сможете добавить надпись, рисунок из нашей библиотеки или загрузить изображение с компьютера. После того, как вы оформите макет, нажмите кнопку «Корзина» для завершения покупки.
+              <p>
+                Чтобы посмотреть конструктор носков или оформить заказ необходимо авторизоваться.
+              </p>
+
+            </p>
+          </div>
         </div>
         <div className="mainItem">
           <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
