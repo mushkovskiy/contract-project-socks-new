@@ -1,9 +1,7 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-
-module.exports = function Constructor({ colors, pictures }) {
-
+module.exports = function Constructor({ colors, pictures, user }) {
   return (
     <Layout user={user}>
       <div className="conteiner conteinerConstructor">
@@ -42,4 +40,3 @@ module.exports = function Constructor({ colors, pictures }) {
     </Layout>
   );
 };
-

@@ -18,7 +18,10 @@ authRouts.post('/registration', async (req, res) => { // POST /auth - созда
     const { password } = req.body; // возьмет password от input
 
     // console.log(email, password);
-    const user = await User.findOne({ where: { email } }); // найдет пользователя с указанными email
+    const user = await User.findOne({
+      raw: true,
+      where: { email },
+    }); // найдет пользователя с указанными email
     console.log(user); // покажет пользователя или null в случае его отсутствия в БД
 
     if (user) {
@@ -59,7 +62,10 @@ authRouts.post('/login', async (req, res) => {
     const { email } = req.body; // возьмет email от input
     const { password } = req.body; // возьмет password от input
 
-    const user = await User.findOne({ where: { email } }); // объявлю юзера который будет искаться в БД
+    const user = await User.findOne({
+      raw: true,
+      where: { email },
+    }); // объявлю юзера который будет искаться в БД
     console.log(user);
 
     if (!user) {
@@ -76,10 +82,9 @@ authRouts.post('/login', async (req, res) => {
 
       req.session.userId = user; // это сессия
       // res.json({ status: 'ok' }); посмотрим статус
-      res.redirect('/constructor');
+      res.redirect('/home');
       // res.write('<script>window.location.href = "/"</script>');
       // res.end();
-
     }
   } catch (error) {
     // console.log(error);

@@ -41,6 +41,6 @@ app.use('/', router);
 app.use('/render', renderBasketRouter);
 
 app.use('/auth', authRouts);
-app.use('/constructor', homeRouts);
+app.use('/home', homeRouts);
 
 app.listen(PORT, async () => console.log('Веб-сервер слушает порт', PORT));

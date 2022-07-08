@@ -2,7 +2,7 @@ const btnContainer = document.querySelector('.blockBtn');
 btnContainer.addEventListener('click', async (event) => {
   if (event.target.classList.contains('btnLink')) {
     event.preventDefault();
-    const res = await fetch('/constructor/color', {
+    const res = await fetch('/home/color', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -17,7 +17,7 @@ btnContainer.addEventListener('click', async (event) => {
 
   if (event.target.classList.contains('btnLinkPic')) {
     event.preventDefault();
-    const res = await fetch('/constructor/picture', {
+    const res = await fetch('/home/picture', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
