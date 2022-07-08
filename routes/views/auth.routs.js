@@ -73,11 +73,13 @@ authRouts.post('/login', async (req, res) => {
     if (email === user.email && isSame) {
       // req.session - объект. В случает совпадения почты и пароля создается сессия
       // req.session присваеваем ключ userID, значением которого будет id текучего юзера
+
       req.session.userId = user; // это сессия
       // res.json({ status: 'ok' }); посмотрим статус
       res.redirect('/constructor');
       // res.write('<script>window.location.href = "/"</script>');
       // res.end();
+
     }
   } catch (error) {
     // console.log(error);

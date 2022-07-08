@@ -94,12 +94,11 @@ footer {
 
 .shoppingCart {
   width: 750px;
-  height: 423px;
-  margin: 80px auto;
+  height: 100%;
+  margin: auto auto;
   background: #FFFFFF;
   box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
   border-radius: 6px;
- 
   display: flex;
   flex-direction: column;
 }
@@ -108,7 +107,7 @@ footer {
   height: 60px;
   border-bottom: 1px solid #E1E8EE;
   padding: 20px 30px;
-  color: #5E6977;
+  color: #ffd801;
   font-size: 18px;
   font-weight: 400;
 }
@@ -117,7 +116,8 @@ footer {
   padding: 20px 30px;
   height: 120px;
   display: flex;
-  align-items: center
+  align-items: center;
+  justify-content: space-around;
 }
 
 .item:nth-child(3) {
@@ -140,16 +140,6 @@ footer {
   width: 18px;
   height: 17px;
   background: url("../img/delete-icn.svg") no-repeat center;
-}
-
-.likeBtn {
-  position: absolute;
-  top: 9px;
-  left: 15px;
-  background: url("../img/like.png");
-  width: 60px;
-  height: 60px;
-  background-repeat: no-repeat;
 }
 
 .image {
@@ -305,6 +295,7 @@ h5{
   color: #5E6977 !important;
 }
 
+
 .divReg{
   width: 100%;
   display: flex;
@@ -316,4 +307,12 @@ h5{
   width: 30%;
   display: flex;
   flex-direction: column;
+
+.linkAll:hover {
+  color: #5E6977;
+}
+
+.title:hover {
+  color: #5E6977;
+
 }

@@ -9,9 +9,10 @@ module.exports = function Layout({ children, user }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="/css/style.css" />
         <link rel="stylesheet" href="/css/normalize.css" />
+        <script src="/js/application.js" defer />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossOrigin="anonymous" />
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossOrigin="anonymous" />
-        <title>Document</title>
+        <title>Store Socks</title>
       </head>
       <body>
         <header>
@@ -20,6 +21,7 @@ module.exports = function Layout({ children, user }) {
               <img className="imgHeader" width="100px" src="/img/91b09da633a706fd69c1c32d32bddbab.png" alt="" />
             </a>
             <nav className="headerNavMenu">
+
               {user && user.id ? (
                 <ul className="headerNavList">
                   <li className="headerNavItem"><a className="linkAll" href="/basket">{user.name}</a></li>

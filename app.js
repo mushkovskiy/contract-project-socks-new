@@ -12,6 +12,8 @@ const renderBasketRouter = require('./routes/views/renderBasket.routs');
 
 const authRouts = require('./routes/views/auth.routs'); // роутер регистрации
 
+const homeRouts = require('./routes/views/home.routs');
+
 const sessionConfig = {
   store: new FileStore(),
   name: 'user_sid',
@@ -25,7 +27,7 @@ const sessionConfig = {
 };
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT ?? 3000;
 
 app.use(session(sessionConfig));
 app.use(logger('dev'));
@@ -38,8 +40,7 @@ app.use(reactSsrMiddleware);
 app.use('/', router);
 app.use('/render', renderBasketRouter);
 
-
-app.use('/auth', authRouts); 
-
+app.use('/auth', authRouts);
+app.use('/constructor', homeRouts);
 
 app.listen(PORT, async () => console.log('Веб-сервер слушает порт', PORT));
