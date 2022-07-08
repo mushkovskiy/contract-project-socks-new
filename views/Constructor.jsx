@@ -6,7 +6,7 @@ module.exports = function Constructor({ colors, pictures, user }) {
     <Layout user={user}>
       <div className="conteiner conteinerConstructor">
         <div className="blockImg">
-          <img className="change-sock" width="300px" src="/img/носки/гарфилд/Frame 1.png" alt="" />
+          <img picid="1" className="change-sock" width="300px" src="/img/носки/гарфилд/Frame 1.png" alt="" />
         </div>
         <div className="blockBtn">
           <h5>Выбери цвет:</h5>
@@ -34,6 +34,10 @@ module.exports = function Constructor({ colors, pictures, user }) {
               </li>
             ))}
           </ul>
+          <div className="btnDiv">
+            <button className="btnBasket" type="submit">Добавить в корзину</button>
+            <button className="btnFavorites" type="submit">Добавить в избранное</button>
+          </div>
         </div>
       </div>
       <script src="./home.js" />

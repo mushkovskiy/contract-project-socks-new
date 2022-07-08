@@ -38,13 +38,13 @@ module.exports = function Main() {
           <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
             <div className="carousel-inner">
               <div className="carousel-item active">
-                <img src="/img/носок1.jpg" className="d-block w-100" alt="..." />
+                <img src="/img/носки/гомер/Group 12.png" className="d-block w-100" alt="..." />
               </div>
               <div className="carousel-item">
-                <img src="/img/носок2.jpg" className="d-block w-100" alt="..." />
+                <img src="/img/носки/пончик/Group 13.png" className="d-block w-100" alt="..." />
               </div>
               <div className="carousel-item">
-                <img src="/img/носок3.jpg" className="d-block w-100" alt="..." />
+                <img src="/img/носки/патрик/Group 2.png" className="d-block w-100" alt="..." />
               </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
