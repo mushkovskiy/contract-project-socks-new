@@ -1,9 +1,9 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-module.exports = function Constructor() {
+module.exports = function Constructor({ user }) {
   return (
-    <Layout>
+    <Layout user={user}>
       <div className="conteiner conteinerConstructor">
         <div className="blockImg">
           <img width="300px" src="/img/носки/гарфилд/Frame 1.png" alt="" />
@@ -42,4 +42,5 @@ module.exports = function Constructor() {
         </div>
       </div>
     </Layout>
-  )}
+  )
+}

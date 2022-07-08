@@ -13,6 +13,7 @@ authRouts.get('/registration', (req, res) => { // GET /auth - отдает фо�
 authRouts.post('/registration', async (req, res) => { // POST /auth - создает регистрацию
   try {
     // то, что поподает в <form> является req.boby
+    const { name } = req.body;
     const { email } = req.body; // возьмет email от input
     const { password } = req.body; // возьмет password от input
 
@@ -29,14 +30,19 @@ authRouts.post('/registration', async (req, res) => { // POST /auth - созда
       // console.log(hash, email, password);
 
       const newUser = await User.create({
+        name,
         email,
         password: hash,
       });
       // console.log(newUser);
     }
-    res.json({ status: 'Ok' });
+    // res.json({ status: 'Ok' });
+    res.write('<script>alert(Регистрация завершена)</script>');
+    res.write('<script>window.location.href = "/"</script>');
+    res.end();
+    // res.redirect('/');
   } catch (error) {
-    // console.log(error);
+    console.log(error);
     res
       .status(500) // покажет статус в случае ошибки на стороне БД
       .json({ messege: error.messege });
@@ -67,9 +73,11 @@ authRouts.post('/login', async (req, res) => {
     if (email === user.email && isSame) {
       // req.session - объект. В случает совпадения почты и пароля создается сессия
       // req.session присваеваем ключ userID, значением которого будет id текучего юзера
-      req.session.userId = user.id; // это сессия
-      //res.json({ status: 'ok' }); посмотрим статус
-      res.redirect('/');
+      req.session.userId = user; // это сессия
+      // res.json({ status: 'ok' }); посмотрим статус
+      res.redirect('/constructor');
+      // res.write('<script>window.location.href = "/"</script>');
+      // res.end();
     }
   } catch (error) {
     // console.log(error);
@@ -81,7 +89,7 @@ authRouts.post('/login', async (req, res) => {
 
 authRouts.get('/logout', async (req, res) => {
   req.session.destroy();
-  res.clearCookie('user.id');
+  res.clearCookie('user_sid');
   res.redirect('/');
 });
 
