@@ -1,16 +1,18 @@
 * {
   box-sizing: border-box;
 }
-main{
+
+main {
   background: linear-gradient(#ffffff, #ffd801);
   background-repeat: no-repeat;
 }
+
 .linkAll {
   color: #ffd801;
   text-decoration: none;
 }
 
-.conteiner  {
+.conteiner {
   max-width: 1800px;
   height: 100%;
   margin-right: 5%;
@@ -35,6 +37,7 @@ header {
   align-items: center;
   justify-content: space-between;
 }
+
 .headerNavMenu {
   width: 50%;
 
@@ -64,6 +67,7 @@ header {
   padding-top: 2%;
   margin-left: 3%;
 }
+
 .mainItem {
   display: flex;
   width: 50%;
@@ -73,6 +77,7 @@ footer {
   width: 100%;
   background: #ffd801;
 }
+
 .conteinerFooter {
   height: 50px;
 }
@@ -97,7 +102,7 @@ footer {
   height: 100%;
   margin: auto auto;
   background: #FFFFFF;
-  box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+  box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.10);
   border-radius: 6px;
   display: flex;
   flex-direction: column;
@@ -121,8 +126,8 @@ footer {
 }
 
 .item:nth-child(3) {
-  border-top:  1px solid #E1E8EE;
-  border-bottom:  1px solid #E1E8EE;
+  border-top: 1px solid #E1E8EE;
+  border-bottom: 1px solid #E1E8EE;
 }
 
 .buttons {
@@ -156,6 +161,7 @@ footer {
 .description span:first-child {
   margin-bottom: 5px;
 }
+
 .description span:last-child {
   font-weight: 300;
   margin-top: 8px;
@@ -165,6 +171,7 @@ footer {
 .quantity {
   margin-right: 60px;
 }
+
 .quantity input {
   -webkit-appearance: none;
   border: none;
@@ -183,6 +190,7 @@ footer {
   border: none;
   cursor: pointer;
 }
+
 .plusBtn {
   width: 30px;
   height: 30px;
@@ -191,16 +199,18 @@ footer {
   border: none;
   cursor: pointer;
 }
+
 .minusBtn img {
   margin-bottom: 3px;
 }
+
 .plusBtn img {
   margin-top: 2px;
 }
- 
+
 button:focus,
 input:focus {
-  outline:0;
+  outline: 0;
 }
 
 .totalPrice {
@@ -217,14 +227,17 @@ input:focus {
     height: auto;
     overflow: hidden;
   }
+
   .item {
     height: auto;
     flex-wrap: wrap;
     justify-content: center;
   }
+
   .image img {
     width: 50%;
   }
+
   .image,
   .quantity,
   .description {
@@ -232,6 +245,7 @@ input:focus {
     text-align: center;
     margin: 6px 0;
   }
+
   .buttons {
     margin-right: 20px;
   }
@@ -248,6 +262,7 @@ input:focus {
   background-color: #f5f5f55d;
   border-radius: 30px;
 }
+
 .blockBtn {
   display: flex;
   justify-content: center;
@@ -255,10 +270,12 @@ input:focus {
   width: 50%;
   margin-left: 8%;
 }
+
 .colorList {
   display: flex;
   justify-content: space-around;
 }
+
 .btnLink {
   display: flex;
   margin-right: 20px;
@@ -272,41 +289,47 @@ input:focus {
 .btnLink1 {
   background: #000000;
 }
+
 .btnLink2 {
   background: #ffffff;
 }
+
 .btnLink3 {
   background: #F7FC0E;
 }
+
 .btnLink4 {
   background: #E21244;
 }
 
-.pictureList{
+.pictureList {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
+
 .btnLinkPic {
   display: flex;
 }
-h5{
+
+h5 {
   margin-left: 9%;
   color: #5E6977 !important;
 }
 
 
-.divReg{
+.divReg {
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-.formReg{
+.formReg {
   width: 30%;
   display: flex;
   flex-direction: column;
+}
 
 .linkAll:hover {
   color: #5E6977;
@@ -315,4 +338,60 @@ h5{
 .title:hover {
   color: #5E6977;
 
+}
+
+.headersContainer {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  position: relative;
+  left: -30px;
+}
+
+.block {
+  -webkit-box-shadow: 20px 20px 15px 0px rgba(87, 105, 118, 0.5);
+  -moz-box-shadow: 20px 20px 15px 0px rgba(87, 105, 118, 0.5);
+  box-shadow: 20px 20px 15px 0px rgba(87, 105, 118, 0.5);
+  font-size: 12px;
+  border: 2px rgb(83, 143, 207) solid;
+  border-radius: 10px;
+  padding: 10px;
+  width: 142px;
+  height: 142px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.homer {
+  height: 140px;
+  position: relative;
+  left: -7px;
+  display: flex;
+}
+
+.couagmir {
+  height: 130px;
+  position: relative;
+  left: -4px;
+  bottom: -5px;
+  display: flex;
+}
+
+.bender {
+  height: 130px;
+  position: relative;
+  left: -7px;
+  bottom: -4px;
+  display: flex;
+}
+
+
+.carousel-inner {
+  border-radius: 13px;
+  -webkit-box-shadow: 20px 20px 15px 0px rgba(87, 105, 118, 0.5);
+  -moz-box-shadow: 20px 20px 15px 0px rgba(87, 105, 118, 0.5);
+  box-shadow: 20px 20px 15px 0px rgba(87, 105, 118, 0.5);
 }

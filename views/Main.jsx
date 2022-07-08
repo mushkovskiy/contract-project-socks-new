@@ -7,16 +7,31 @@ module.exports = function Main() {
       <div className="conteiner conteinerMain">
         <div className="mainItem">
           <div>
+
             <h2>
               Здравствуй, друг!
             </h2><br />
             <p>
-              С помощью нашего редактора вы сможете добавить надпись, рисунок из нашей библиотеки или загрузить изображение с компьютера. После того, как вы оформите макет, нажмите кнопку «Корзина» для завершения покупки.
+              С помощью нашего редактора ты сможешь создать уникальный дизайн носков, добавить надпись или рисунок из нашей библиотеки. После того, как вы оформите макет, нажмите кнопку «Корзина» для завершения покупки.
               <p>
                 Чтобы посмотреть конструктор носков или оформить заказ необходимо авторизоваться.
               </p>
 
             </p>
+            <div className="headerText"><br />
+              Наши амбассадоры:
+            </div>
+            <div className="headersContainer">
+              <div className="block">
+                <img src="/img/homer.png" className="homer" alt="..." />
+              </div>
+              <div className="block">
+                <img src="/img/couagmir.png" className="couagmir" alt="..." />
+              </div>
+              <div className="block">
+                <img src="/img/bender.png" className="bender" alt="..." />
+              </div>
+            </div>
           </div>
         </div>
         <div className="mainItem">
