@@ -1,6 +1,6 @@
 const React = require('react');
 
-module.exports = function Layout({ children }) {
+module.exports = function Layout({ children, user }) {
   return (
     <html lang="en">
       <head>
@@ -21,23 +21,46 @@ module.exports = function Layout({ children }) {
               <img className="imgHeader" width="100px" src="/img/91b09da633a706fd69c1c32d32bddbab.png" alt="" />
             </a>
             <nav className="headerNavMenu">
-              <ul className="headerNavList">
-                <li className="headerNavItem"><a className="linkAll" href="/auth/registration">Зарегистрироваться</a></li>
-                <li className="headerNavItem"><a className="linkAll" href="/login">Войти</a></li>
-                <li className="headerNavItem"><a className="linkAll" href="/logout">Выйти</a></li>
-                <li className="headerNavItem">
-                  <a href="">
-                    <img className="imgBascket" width="30px" src="/img/like.png" alt="" />
-                  </a>
 
-                </li>
-                <li className="headerNavItem">
-                  <a href="">
-                    <img className="imgBascket" width="30px" src="/img/корзина.png" alt="" />
-                  </a>
+              {user && user.id ? (
+                <ul className="headerNavList">
+                  <li className="headerNavItem"><a className="linkAll" href="/basket">{user.name}</a></li>
+                  <li className="headerNavItem"><a className="linkAll" href="/basket">Корзина</a></li>
+                  {/* <li className="headerNavItem"><a className="linkAll" href="/auth/login">Войти</a></li> */}
+                  <li className="headerNavItem"><a className="linkAll" href="/auth/logout">Выйти</a></li>
+                  <li className="headerNavItem">
+                    <a href="">
+                      <img className="imgBascket" width="30px" src="/img/like.png" alt="" />
+                    </a>
 
-                </li>
-              </ul>
+                  </li>
+                  <li className="headerNavItem">
+                    <a href="">
+                      <img className="imgBascket" width="30px" src="/img/корзина.png" alt="" />
+                    </a>
+
+                  </li>
+                </ul>
+              ) : (
+                <ul className="headerNavList">
+                  <li className="headerNavItem"><a className="linkAll" href="/auth/registration">Зарегистрироваться</a></li>
+                  <li className="headerNavItem"><a className="linkAll" href="/auth/login">Войти</a></li>
+                  <li className="headerNavItem"><a className="linkAll" href="/auth/logout">Выйти</a></li>
+                  <li className="headerNavItem">
+                    <a href="">
+                      <img className="imgBascket" width="30px" src="/img/like.png" alt="" />
+                    </a>
+
+                  </li>
+                  <li className="headerNavItem">
+                    <a href="">
+                      <img className="imgBascket" width="30px" src="/img/корзина.png" alt="" />
+                    </a>
+
+                  </li>
+                </ul>
+              )}
+
             </nav>
           </div>
         </header>

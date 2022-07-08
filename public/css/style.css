@@ -12,6 +12,7 @@ main{
 
 .conteiner  {
   max-width: 1800px;
+  height: 100%;
   margin-right: 5%;
   padding: 0 15px;
 }
@@ -294,10 +295,24 @@ h5{
   color: #5E6977 !important;
 }
 
+
+.divReg{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.formReg{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+
 .linkAll:hover {
   color: #5E6977;
 }
 
 .title:hover {
   color: #5E6977;
+
 }
