@@ -26,7 +26,8 @@ btnContainer.addEventListener('click', async (event) => {
         name: event.target.dataset.name,
       }),
     });
-    const { url } = await res.json();
+    const { url, id } = await res.json();
     document.querySelector('.change-sock').setAttribute('src', `${url}`);
+    document.querySelector('.change-sock').setAttribute('picid', `${id}`);
   }
 });

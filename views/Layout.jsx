@@ -10,6 +10,7 @@ module.exports = function Layout({ children, user }) {
         <link rel="stylesheet" href="/css/style.css" />
         <link rel="stylesheet" href="/css/normalize.css" />
         <script src="/js/application.js" defer />
+        <script src="/js/basketbtn.js" defer />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossOrigin="anonymous" />
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossOrigin="anonymous" />
         <title>Store Socks</title>
@@ -25,17 +26,15 @@ module.exports = function Layout({ children, user }) {
               {user && user.id ? (
                 <ul className="headerNavList">
                   <li className="headerNavItem"><a className="linkAll" href="/basket">{user.name}</a></li>
-                  <li className="headerNavItem"><a className="linkAll" href="/basket">Корзина</a></li>
-                  {/* <li className="headerNavItem"><a className="linkAll" href="/auth/login">Войти</a></li> */}
                   <li className="headerNavItem"><a className="linkAll" href="/auth/logout">Выйти</a></li>
                   <li className="headerNavItem">
-                    <a href="">
+                    <a href="/render/like">
                       <img className="imgBascket" width="30px" src="/img/like.png" alt="" />
                     </a>
 
                   </li>
                   <li className="headerNavItem">
-                    <a href="">
+                    <a href="/render/basket">
                       <img className="imgBascket" width="30px" src="/img/корзина.png" alt="" />
                     </a>
 
@@ -46,18 +45,6 @@ module.exports = function Layout({ children, user }) {
                   <li className="headerNavItem"><a className="linkAll" href="/auth/registration">Зарегистрироваться</a></li>
                   <li className="headerNavItem"><a className="linkAll" href="/auth/login">Войти</a></li>
                   <li className="headerNavItem"><a className="linkAll" href="/auth/logout">Выйти</a></li>
-                  <li className="headerNavItem">
-                    <a href="">
-                      <img className="imgBascket" width="30px" src="/img/like.png" alt="" />
-                    </a>
-
-                  </li>
-                  <li className="headerNavItem">
-                    <a href="">
-                      <img className="imgBascket" width="30px" src="/img/корзина.png" alt="" />
-                    </a>
-
-                  </li>
                 </ul>
               )}
 

@@ -47,7 +47,7 @@ router.get('/', async (req, res) => {
     include: [User.Picture],
   });
   // console.log(joinUser);
-  const joinFavUser = await Favourite.findOne({
+  const joinFavUser = await Favourite.findAll({
     raw: true,
     where: {
       user_id: '1',

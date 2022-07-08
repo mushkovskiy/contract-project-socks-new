@@ -3,9 +3,9 @@ const Layout = require('./Layout');
 
 const Card = require('./Card');
 
-function Basket({ socks }) {
+function Basket({ socks, user}) {
   return (
-    <Layout>
+    <Layout user={user}>
       <div className="shoppingCart">
         <div className="title">
           Shopping Bag
